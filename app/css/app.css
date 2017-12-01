@@ -6,3 +6,10 @@
 .container {
     padding-top: 2rem;
 }
+
+.card .feedback {
+    display: none;
+}
+
+.card .option {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
