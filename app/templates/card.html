@@ -7,8 +7,8 @@
         <!-- <p class="card-text hidden">{{content.title}}</p> -->
     </div>
     <ul class="list-group list-group-flush quiz">
-        <li class="list-group-item option" ng-repeat="option in content.options" ng-click="verify($index);" ng-class="{selected:option.selected}" data-index="{{$index}}">
-            <a href="#" class="btn btn-primary">{{option.label}}</a>
+        <li class="list-group-item option" ng-repeat="option in content.options" ng-click="verify($index);" ng-class="{selected: option.selected || option.isCorrect }" data-index="{{$index}}">
+            {{option.label}}
         </li>
     </ul>
     <div class="card-body feedback">

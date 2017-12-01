@@ -13,6 +13,9 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap-material-design.min.css" rel="stylesheet">
 
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="../css/slick.css"><link rel="stylesheet" href="../css/slick-theme.css">
+
     <!-- App style -->
     <link href="css/app.css" rel="stylesheet">
 
@@ -21,26 +24,30 @@
 
 <body ng-app="deeep" ng-controller="main-controller">
 
-    <nav class="navbar navbar-light bg-light text-center">
+    <nav class="navbar fixed-top navbar-light bg-light text-center">
         <a class="navbar-brand" href="#">Deeep</a>
     </nav>
 
-    <div class="container">
-        <div ng-repeat="question in questions">
-            <card content="question"></card>
-        </div>
+    <div class="content container-fluid">
+
+        <slick class="questions card-deck" arrows="false">
+            <div ng-repeat="question in questions">
+                <card content="question"></card>
+            </div>
+        </slick>
 
     </div>
 
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    
-    <script src="js/app.js"></script>
-    <script src="js/directives.js"></script>
-    
     <!-- Popper
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script> -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/angular.slick.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/directives.js"></script>
 
   </body>
 </html>

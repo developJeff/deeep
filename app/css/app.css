@@ -1,10 +1,27 @@
 
+:focus {
+    outline: none;
+}
+
+html, body, .content, slick, .slick-list, .slick-track, .questions, card, .card {
+    height: 100%;
+}
+
+.navbar {
+    height: 64px;
+}
+
 .app {
     
 }
 
-.container {
-    padding-top: 2rem;
+.content {
+    padding: 4rem 0 0;
+}
+
+card {
+    display: block;
+    padding: 1rem;
 }
 
 .card .feedback, .card.answered .quiz .option:not(.selected) {

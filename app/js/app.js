@@ -1,4 +1,4 @@
-var app = angular.module('deeep',[]);
+var app = angular.module('deeep',['slick']);
 
 // app.config(['$stateProvider', '$urlRouterProvider',  function($stateProvider, $urlRouterProvider) {
 
