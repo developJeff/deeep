@@ -1,0 +1,27 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://developJeff@github.com/developJeff/deeep.git"
+  },
+  "author": "jefferson rodrigues and felipe Velloso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developJeff/deeep/issues"
+  },
+  "homepage": "https://github.com/developJeff/deeep#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "bootstrap-material-design": "^4.0.0-beta.4",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "install": "^0.10.2",
+    "npm": "^5.5.1"
+  }
+}
