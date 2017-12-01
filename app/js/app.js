@@ -25,7 +25,63 @@ var app = angular.module('deeep',[]);
         
 //     });
 // });
+app.service('Content',['$http','$rootScope',function($http){
+    this.load = function(callback){
+         $http({
+            method: 'GET',
+            url: 'js/content.json',
+        }).then(function (response) {
+            callback(response.data);
+        });
+    }
+}]);
 
-app.controller('main-controller',function(){
-   console.log('funfou');
+app.controller('main-controller',function($scope,Content){
+    $scope.questions = {
+    question1:{
+        title:'Essa é a questão que vem do servidor.',
+        options: {
+            1:{
+                label: 'option 1',
+                selected:false,
+                isCorrect: 0
+            },
+            2:{
+                label: 'option 2',
+                selected:false,
+                isCorrect: 0
+            },
+            3:{
+                label: 'option 3',
+                selected:false,
+                isCorrect: 1
+            }
+        },
+        feedback: 'Aqui vai o feedback da questão.'
+    },
+    question2:{
+        title:'Essa é a questão que vem do servidor.',
+        options: {
+            1:{
+                label: 'option 1',
+                selected:false,
+                isCorrect: 0
+            },
+            2:{
+                label: 'option 2',
+                selected:false,
+                isCorrect: 0
+            },
+            3:{
+                label: 'option 3',
+                selected:false,
+                isCorrect: 1
+            }
+        },
+        feedback: 'Aqui vai o feedback da questão.'
+    }
+   }
+    // Content.load(function(data){
+    //     $scope.questions = data;
+    // });
 });
