@@ -1,17 +1,27 @@
- <div class="card" ng-class="{answered: answered}">
+ <div class="card" ng-class="{'answered': answered, 'incorrect': !isCorrect&&isCorrect!=null, 'correct': isCorrect }">
     <!-- <div class="card-header hidden">
         Categoria
     </div> -->
-    <div class="card-body">
+    <div class="context card-body transition">
         <h4 class="card-title">{{content.title}}</h4>
+        <!-- <i class="hidden material-icons">expand_more</i> -->
         <!-- <p class="card-text hidden">{{content.title}}</p> -->
     </div>
-    <ul class="list-group list-group-flush quiz">
-        <li class="list-group-item option" ng-repeat="option in content.options" ng-click="verify($index);" ng-class="{selected: option.selected || option.isCorrect }" data-index="{{$index}}">
-            {{option.label}}
+    <ul class="quiz list-group list-group-flush transition">
+        <li class="option list-group-item transition" ng-repeat="option in content.options" ng-click="verify($index);" ng-class="{'selected': option.selected, 'incorrect': !option.isCorrect, 'correct': option.isCorrect }" data-index="{{$index}}">
+            <div class="option-icon">
+                <i class="icon unchecked material-icons transition">radio_button_unchecked</i>
+                <i class="icon incorrect material-icons transition">cancel</i>
+                <i class="icon correct material-icons transition">check_circle</i>
+            </div>
+            <p class="option-text">{{option.label}}</p>
+            <div class="help-icon transition" ng-show="option.isCorrect">
+                <i class="icon material-icons">help_outline</i>
+            </div>
         </li>
     </ul>
-    <div class="card-body feedback">
-        <p class="card-text">{{content.feedback}}</p>
+    <div class="feedback card-footer transition">
+        <h5 class="feedback-title">Feedback</h5>
+        <p class="feedback-text lead">{{content.feedback}}</p>
     </div>
 </div>

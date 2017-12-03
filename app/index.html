@@ -16,21 +16,26 @@
     <!-- Slick CSS -->
     <link rel="stylesheet" href="../css/slick.css"><link rel="stylesheet" href="../css/slick-theme.css">
 
+    <!-- Scrollbar CSS
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css"> -->
+
     <!-- App style -->
     <link href="css/app.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 </head>
 
 <body ng-app="deeep" ng-controller="main-controller">
 
-    <nav class="navbar fixed-top navbar-light bg-light text-center">
-        <a class="navbar-brand" href="#">Deeep</a>
+    <nav class="navbar fixed-top navbar-light text-center">
+        <a class="navbar-brand" href="#">deeep</a>
     </nav>
 
     <div class="content container-fluid">
 
-        <slick class="questions card-deck" arrows="false">
+        <slick class="questions card-deck" arrows="false" infinite="false">
             <div ng-repeat="question in questions">
                 <card content="question"></card>
             </div>

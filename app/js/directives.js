@@ -10,8 +10,15 @@ app.directive('card', function($window) {
                 scope.verify = function(index){
                     scope.answered = true;
                     scope.content.options[index+1].selected=true;
+                    if(scope.content.options[index+1].isCorrect){
+                        scope.isCorrect = true;
+                        setTimeout(function(){
+                            $(element).parents('slick').slick('slickNext');
+                        },2000);
+                    }else{
+                        scope.isCorrect = false;
+                    }
                 }
-                
 		    }
         };
     });
