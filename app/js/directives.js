@@ -1,7 +1,7 @@
 app.directive('card', function($window) {
         return {
             restrict: 'E',
-            templateUrl: 'templates/card.html',
+            templateUrl: 'app/templates/card.html',
             scope: {
                 content:'=content'
             },
